@@ -8,6 +8,7 @@ import {CompaniesComponent} from '../Companies/companies.component';
 import {CompanyComponent} from '../Company/company.component';
 
 import {CompaniesService} from '../Services/companies.service';
+import {NotesService} from '../Services/notes.service';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import {CompaniesService} from '../Services/companies.service';
         HttpModule
     ],
     providers: [
-        CompaniesService
+        CompaniesService,
+        NotesService
     ],
     bootstrap: [AppComponent]
 })

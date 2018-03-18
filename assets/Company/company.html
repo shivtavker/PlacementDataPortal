@@ -3,7 +3,7 @@
     <div class="table-col col-1">
         <h3>Column A</h3>
         <div *ngFor="let note of notes; let i=index;">
-            <div class="note-container" *ngIf="(note.columnID == 1)">
+            <div class="note-container" *ngIf="(note.columnID == 1) && (note.CompanyID == company.ID)">
                 <div class="note-heading">
                     {{note.title}}
                 </div>
@@ -20,7 +20,7 @@
     <div class="table-col col-2">
         <h3>Column B</h3>
         <div *ngFor="let note of notes; let i=index;">
-            <div class="note-container" *ngIf="(note.columnID == 2)">
+            <div class="note-container" *ngIf="(note.columnID == 2) && (note.CompanyID == company.ID)">
                 <div class="note-heading">
                     {{note.title}}
                 </div>
@@ -37,7 +37,7 @@
     <div class="table-col col-3">
         <h3>Column C</h3>
         <div *ngFor="let note of notes; let i=index;">
-            <div class="note-container" *ngIf="(note.columnID == 3)">
+            <div class="note-container" *ngIf="(note.columnID == 3) && (note.CompanyID == company.ID)">
                 <div class="note-heading">
                     {{note.title}}
                 </div>
@@ -54,7 +54,7 @@
     <div class="table-col col-4">
         <h3>Column D</h3>
         <div *ngFor="let note of notes; let i=index;">
-            <div class="note-container" *ngIf="(note.columnID == 4)">
+            <div class="note-container" *ngIf="(note.columnID == 4) && (note.CompanyID == company.ID)">
                 <div class="note-heading">
                     {{note.title}}
                 </div>
