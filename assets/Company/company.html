@@ -1,0 +1,103 @@
+<h1 class="center">{{company.name}}</h1>
+<div class="table-container">
+    <div class="table-col col-1">
+        <h3>Column A</h3>
+        <div *ngFor="let note of notes; let i=index;">
+            <div class="note-container" *ngIf="(note.columnID == 1)">
+                <div class="note-heading">
+                    {{note.title}}
+                </div>
+                <div class="note-body" [innerHTML]="note.body">
+                </div>
+                <div class="note-footer">
+                    <a class="styled-link" [routerLink]="" (click)="editNoteBox(i)">Edit</a>
+                    <a class="styled-link" [routerLink]="" (click)="deleteNote(i)">Delete</a>
+                </div>
+            </div>
+        </div>
+        <a class="addNoteText" [routerLink]="" (click)="addNoteBox(1)">Add Note</a>
+    </div>
+    <div class="table-col col-2">
+        <h3>Column B</h3>
+        <div *ngFor="let note of notes; let i=index;">
+            <div class="note-container" *ngIf="(note.columnID == 2)">
+                <div class="note-heading">
+                    {{note.title}}
+                </div>
+                <div class="note-body" [innerHTML]="note.body">
+                </div>
+                <div class="note-footer">
+                    <a class="styled-link" [routerLink]="" (click)="editNoteBox(i)">Edit</a>
+                    <a class="styled-link" [routerLink]="" (click)="deleteNote(i)">Delete</a>
+                </div>
+            </div>
+        </div>
+        <a class="addNoteText" [routerLink]="" (click)="addNoteBox(2)">Add Note</a>
+    </div>
+    <div class="table-col col-3">
+        <h3>Column C</h3>
+        <div *ngFor="let note of notes; let i=index;">
+            <div class="note-container" *ngIf="(note.columnID == 3)">
+                <div class="note-heading">
+                    {{note.title}}
+                </div>
+                <div class="note-body" [innerHTML]="note.body">
+                </div>
+                <div class="note-footer">
+                    <a class="styled-link" [routerLink]="" (click)="editNoteBox(i)">Edit</a>
+                    <a class="styled-link" [routerLink]="" (click)="deleteNote(i)">Delete</a>
+                </div>
+            </div>
+        </div>
+        <a class="addNoteText" [routerLink]="" (click)="addNoteBox(3)">Add Note</a>
+    </div>
+    <div class="table-col col-4">
+        <h3>Column D</h3>
+        <div *ngFor="let note of notes; let i=index;">
+            <div class="note-container" *ngIf="(note.columnID == 4)">
+                <div class="note-heading">
+                    {{note.title}}
+                </div>
+                <div class="note-body" [innerHTML]="note.body">
+                </div>
+                <div class="note-footer">
+                    <a class="styled-link" [routerLink]="" (click)="editNoteBox(i)">Edit</a>
+                    <a class="styled-link" [routerLink]="" (click)="deleteNote(i)">Delete</a>
+                </div>
+            </div>
+        </div>
+        <a class="addNoteText" [routerLink]="" (click)="addNoteBox(4)">Add Note</a>
+    </div>
+    <div class="editNote" [hidden]="!wantToEditNote">
+        <div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Edit Note</h2>
+			</div>
+			<label for="NoteTitle">Note Title:</label>
+			<br/>
+			<input type="text" id="note-title" #noteTitle>
+			<br/>
+			<label for="NoteBody">Note Body:</label>
+			<br/>
+			<input type="text" id="note-body" #noteBody>
+			<br/>
+			<button type="button" (click)="editNote()">Edit Note</button>
+		</div>
+    </div>
+    <div class="AddNote" [hidden]="!wantToAddNote">
+        <div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Add Note</h2>
+			</div>
+			<label for="NoteTitle">Note Title:</label>
+			<br/>
+			<input type="text" id="note-title" #noteTitle2>
+			<br/>
+			<label for="NoteBody">Note Body:</label>
+			<br/>
+			<input type="text" id="note-body" #noteBody2>
+			<br/>
+			<button type="button" (click)="addNote()">Add Note</button>
+		</div>
+    </div>
+</div>

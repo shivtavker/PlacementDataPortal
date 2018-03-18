@@ -1,0 +1,21 @@
+<h1 class="center">COMPANIES</h1>
+<div class="companies-list-container">
+    <ul class="companies-list">
+        <li *ngFor="let company of companies; let i= index;" class="company"><a [routerLink]="['/company', company.name, company.ID]">{{company.name}}</a></li>
+    </ul>
+
+    <a class="addCompanyText" [routerLink]="" (click)="addCompanyBox=!addCompanyBox">Add a Compnay</a>
+
+    <div class="addCompany" *ngIf="addCompanyBox">
+        <div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Add Company</h2>
+			</div>
+			<label for="companyName">Company Name:</label>
+			<br/>
+			<input type="text" id="company-name" #companyName>
+			<br/>
+			<button type="button" (click)="addCompany()">Add</button>
+		</div>
+    </div>
+</div>
