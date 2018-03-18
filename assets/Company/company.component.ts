@@ -104,7 +104,7 @@ notes = [
     addNote(){
         let note = {
             ID: this.notes[this.notes.length -1].ID + 1,
-            companyID: this.company.ID,
+            CompanyID: this.company.ID,
             columnID: this.columnToAddNote,
             title: this.noteTitle2TextBox.nativeElement.value,
             body: this.noteBody2TextBox.nativeElement.value

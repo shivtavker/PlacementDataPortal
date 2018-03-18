@@ -6,7 +6,7 @@ var Notes = require('../models/notes');
 /* Save Notes */
 router.post('/', function(req, res, next) {
     var ID = req.body.ID;
-    var CompanyID = req.body.companyID;
+    var CompanyID = req.body.CompanyID;
     var columnID = req.body.columnID;
     var title = req.body.title;
     var body = req.body.body;

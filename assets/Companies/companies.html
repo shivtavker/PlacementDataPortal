@@ -1,7 +1,11 @@
 <h1 class="center">COMPANIES</h1>
 <div class="companies-list-container">
     <ul class="companies-list">
-        <li *ngFor="let company of companies; let i= index;" class="company"><a [routerLink]="['/company', company.CompanyName, company.ID]">{{company.CompanyName}}</a></li>
+		<div *ngFor="let company of companies; let i= index;">
+			<li *ngIf="i>0" class="company">
+				<a [routerLink]="['/company', company.CompanyName, company.ID]">{{company.CompanyName}}</a>
+			</li>
+		</div>
     </ul>
 
     <a class="addCompanyText" [routerLink]="" (click)="addCompanyBox=!addCompanyBox">Add a Compnay</a>
