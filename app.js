@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/',companiesRoutes);
+app.use('/companies',companiesRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
