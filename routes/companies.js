@@ -4,7 +4,7 @@ var router = express.Router();
 var Companies = require('../models/companies');
 
 /* Save Companies */
-router.post('/companies', function(req, res, next) {
+router.post('/', function(req, res, next) {
     var CompanyName = req.body.name;
     var ID = req.body.ID;
 
@@ -27,7 +27,7 @@ router.post('/companies', function(req, res, next) {
     });
 });
 
-router.get('/companies', function(req, res, next) {
+router.get('/get', function(req, res, next) {
     Companies.find({}, function(err, companies){
             if (err){
                return res.status(500).json({
